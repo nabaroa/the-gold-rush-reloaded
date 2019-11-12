@@ -1,0 +1,248 @@
+:root {
+	--bold: lato-bold, sans-serif;
+  --light: lato-light, sans-serif;
+  --spacer: 8px;
+  --color: #cd2682;
+  --secondary-color: #FABADA;
+}
+
+@import "../template/mixins";
+@import "../template/settings";
+
+@import "nak-code";
+
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+$backgroundColor: #fff;
+$mainColor: #222;
+$headingColor: #222;
+$color: #cd2682;
+$secondary-color: #FABADA;
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: normal;
+$headingFontWeight: 600;
+$linkColor: $color;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+@import "../template/theme";
+
+.color {
+  color: var(--color);
+}
+
+.inverse {
+  color: white !important;
+}
+
+.random-matches {
+	margin-top: -3vh;
+	display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+
+	span {
+		width: 33%;
+		height: 44vh;
+		overflow: hidden;
+		box-sizing: border-box;
+  }
+  
+	img {
+		margin: 0 !important;
+		object-fit: cover;
+		object-position: top;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.about {
+	text-align: left;
+	padding: 10px;
+
+	p {
+		font-size: 0.5em;
+		margin: 0 !important;
+	}
+}
+
+.about__title {
+	font-size: 0.8em !important;
+	margin: 0 !important;
+}
+
+.icon-source {
+  display: inline-block;
+  position: fixed !important;
+  border-radius: 500rem;
+	width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  background: url('./../../assets/svg/icon-link.svg');
+  
+  &:hover {
+    &::after {
+      display: block;
+    }
+  }
+
+  &.inverse {
+    background: url('./../../assets/svg/icon-link--white.svg');
+  }
+
+  &::after {
+    content: "source";
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    font-family: var(--light);
+    font-size: 0.8em;
+  }
+}
+
+.reveal h1 {
+	font-weight: 100;
+	strong {
+		font-size: 900;
+	}
+}
+
+.highlight {
+  padding: 0 calc(var(--spacer) * 2);
+	background: white; 
+	color: var(--color) !important;
+}
+
+.highlight-color {
+  padding: 0 calc(var(--spacer) * 2);
+	background: var(--secondary-color); 
+}
+
+.status-pr {
+  background: #72AC35;
+}
+
+.status-cr {
+  background: #cfd730;
+}
+
+.status-wd {
+  background: rgb(230, 110, 51);
+}
+
+.status-fwd {
+  background: #b3634f;
+}
+
+section.label-pr::after {
+  content: 'PR';
+  display: flex;
+  align-items: center;
+  background: #72AC35;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+  transform: rotate(-90deg);
+}
+
+section.label-cr::after {
+  content: 'CR';
+  display: flex;
+  align-items: center;
+  background: #cfd730;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+  transform: rotate(-90deg);
+}
+
+section.label-wd::after {
+  content: 'WD';
+  display: flex;
+  align-items: center;
+  background:#E66E3C;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+  transform: rotate(-90deg);
+  color: white;
+}
+
+section.label-fwd::after {
+  content: 'FWD';
+  display: flex;
+  align-items: center;
+  background: #b3634f;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+  transform: rotate(-90deg);
+  color: white;
+}
+
+.reveal img.avatar {
+  border-radius: 100%;
+  filter: grayscale(1);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+/* utilities */
+
+.text-shadow {
+  text-shadow: 15px 15px 15px rgba(0,0,0,.5) !important;
+}
+
+.scroll-y {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.m-a-0 {
+  margin: 0 !important;
+}
+
+.height--1-of-3 {
+  height: 28vh;
+}
+
+.d-block {
+	display: block;
+}
+
+.d-flex {
+  display: flex;
+}

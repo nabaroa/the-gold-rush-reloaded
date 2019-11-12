@@ -1,2 +1,1 @@
-# the-gold-rush-reloaded
-CSS new specs 
+# the-gold-rush

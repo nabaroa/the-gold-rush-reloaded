@@ -1,0 +1,661 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>The Gold Rush. CSS nuggets. Reloaded</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/nak.css">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section data-background="assets/images/cover.jpg"></section>
+        <section>
+          <div class="random-matches">
+            <span><img src="assets/images/naiara_abaroa.jpg" alt=""></span>
+            <span><img src="assets/images/lekitto.jpg" alt=""></span>
+            <span><img src="assets/images/london.jpg" alt=""></span>
+            <span><img src="assets/images/team.jpg" alt=""></span>
+            <span><img src="assets/images/fg.jpg" alt=""></span>
+            <span class="about">
+              <h5 class="about__title">Naiara Abaroa </h5>
+              <p>
+                <a class=" small" href="https://twitter.com/nabaroa" target="_blank">@nabaroa</a>
+                |
+                <a class=" small" href="http://naknak.me" target="_blank">naknak.me</a>
+              </p>
+
+              <p><span class="bold  block">Frontend designer</span> at
+                <a class="bold no-text-decoration" href="http://transferwise.com" target="_blank">
+                  <img src="assets/images/transferwise.svg" alt="Transferwise" />
+                </a>
+              </p>
+            </span>
+            <span>
+              <img src="assets/images/naiara-abaroa.jpg" alt=""></span>
+            <span>
+              <a class="column-span" href="http://randommatches.live/" target="_blank"><img src="assets/images/rm.jpg"
+                  alt=""></a>
+            </span>
+            <span>
+              <img src="assets/images/studio-chair.jpg" alt="">
+            </span>
+          </div>
+        </section>
+        <section>
+          <img src="assets/images/theantievent.png" alt="TheAntiEvent">
+          <img class="avatar" src="assets/images/cata.jpg" alt="TheAntiEvent">
+          <a href="https://twitter.com/cataflu">Cata Oyaneder</a>
+        </section>
+        <section data-background="assets/images/rm2.jpg">
+          <h1><a target="_blank" class="highlight" href="http://randommatches.live/">randommatches.live</a>
+          </h1>
+        </section>
+        <section data-background="assets/images/nakstudio.gif">
+        </section>
+      </section>
+      <section>
+        <section data-background="#fabada">
+          <h1 class="highlight-color"><strong>Contexto</strong></h1>
+        </section>
+        <section data-background="assets/images/cover-2016.jpg">
+          <a href="http://nabaroa.github.io/theGoldRush/#/" target="_blank" class="icon-source inverse text-shadow"></a>
+        </section>
+        <section data-background="#222">
+          <h2>March of <span class="color">2016</span></h2>
+          <ul>
+            <li>Bye bye <strong>-prefixes-</strong></li>
+            <li>Grid layout</li>
+            <li>Custom properties</li>
+            <li>CSS modules</li>
+            <li>PostCSS. Is Sass dead?</li>
+          </ul>
+        </section>
+        <section>
+          <img src="assets/images/css3.png" alt="CSS3 logo">
+        </section>
+        <section data-background="assets/images/logo-css-google.png"></section>
+        <section>
+          <img src="assets/images/css3-x.png" alt="CSS3 logo">
+        </section>
+        <section>
+          <a href="https://www.w3.org/2016/09/logo-CSS.png" target="_blank" class="icon-source"></a>
+          <img src="assets/images/logo-CSS.png" alt="CSS logo">
+        </section>
+        <section>
+          <img src="assets/images/css-logo-diekus.png" alt="">
+          <a href="https://twitter.com/diekus/status/1173878642956365825?s=20" target="_blank" class="icon-source"></a>
+        </section>
+        <section data-background="assets/images/seven.jpg"></section>
+        <section data-background="assets/images/seven.jpg">
+          <h1 class="highlight-color">1996</h1>
+        </section>
+        <section>
+          <img src="assets/svg/css_timeline.svg" alt="">
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>
+            Understand the <strong class="color">spec</strong>
+          </h1>
+          <img
+            src="https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2018/10/18/w3c_logo-800x400.jpg"
+            alt="w3C">
+        </section>
+        <section data-background="assets/images/bruja-averia.jpg"></section>
+        <section>
+          <h1>CSS<strong>WG</strong></h1>
+          <p>Working Group</p>
+          <a href="https://www.w3.org/Style/CSS/" class="icon-source"></a>
+        </section>
+        <section data-background="assets/images/csswg-2010.jpg">
+          <h1 class="inverse text-shadow">2010</h1>
+        </section>
+        <section data-background="assets/images/csswg-2016.jpg">
+          <h1 class="inverse text-shadow">2016</h1>
+        </section>
+        <section data-background="assets/images/csswg-2018.jpg">
+          <h1 class="inverse text-shadow">2018</h1>
+        </section>
+        <section data-background="assets/images/csswg-2018--jen.jpg">
+          <a href="https://twitter.com/jensimmons" target="_blank" class="inverse icon-source"></a>
+        </section>
+        <section>
+          <h1>Jen Simmons</h1>
+          <img class="avatar" src="assets/images/jen.jpg" alt="">
+          <a href="https://jensimmons.com/">Web</a>
+          <a href="https://www.youtube.com/layoutland/">Youtube channel</a>
+        </section>
+        <section>
+          <h1>Fantasai</h1>
+          <img class="avatar d-block" src="assets/images/fantasai.jpg" alt="">
+          <a href="http://fantasai.inkedblade.net/">Web</a>
+          <a href="https://twitter.com/fantasai?lang=en">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=OtlGo48iTOk">Youtube</a>
+          <a href="http://fantasai.inkedblade.net/style/talks/defining-auto/#speclist">Work on spec</a>
+        </section>
+        <section>
+          <h1>Florian Rivoal</h1>
+          <img class="avatar" src="assets/images/florian.jpg" alt="">
+          <a href="https://florian.rivoal.net/">Web</a>
+          <a href="https://www.linkedin.com/in/frivoal/?originalSubdomain=fr">Linkedin</a>
+          <a href="https://florian.rivoal.net/cv.html">CV</a>
+        </section>
+        <section>
+          <h1>David Baron</h1>
+          <img class="avatar" src="assets/images/david.jpg" alt="">
+          <a href="https://dbaron.org/">Web</a>
+          <a href="https://dbaron.org/home">Web home</a>
+        </section>
+        <section>
+          <h1>How to <strong>become</strong> a member?</h1>
+          <h2><a href="https://www.w3.org/Consortium/join" target="_blank">Join</a></h2>
+          <a href="https://www.w3.org/participate/faq" class="icon-source"></a>
+        </section>
+        <section>
+          <a href="https://www.w3.org/Style/CSS/members" target="_blank" class="icon-source"></a>
+          <ul class="scroll-y">
+            <li><strong>Said Abou-Hallawa </strong>Apple, Inc.</li>
+            <li><strong>Glenn Adams </strong>Skynav, Inc.</li>
+            <li><strong>Rakina Amni </strong>Google, Inc.</li>
+            <li><strong>Rachel Andrew </strong>Fronteers</li>
+            <li><strong>Adam Argyle </strong>Google, Inc.</li>
+            <li><strong>Rossen Atanassov </strong>Microsoft Corporation</li>
+            <li><strong>Tab Atkins Jr. </strong>Google, Inc.</li>
+            <li><strong>Takao Baba </strong>Beyond Perspective Solutions ltd</li>
+            <li><strong>Mihail-Alexandru Balan </strong>Adobe</li>
+            <li><strong>David Baron </strong>Mozilla Foundation</li>
+            <li><strong>Daniel Bates </strong>Apple, Inc.</li>
+            <li><strong>Amelia Bellamy-Royds </strong>W3C Invited Experts</li>
+            <li><strong>Garrett Berg </strong>Airbnb Inc</li>
+            <li><strong>Christian Biesinger </strong>Google, Inc.</li>
+            <li><strong>Brian Birtles </strong>W3C Invited Experts</li>
+            <li><strong>Bert Bos </strong>W3C Staff</li>
+            <li><strong>Oriol Brufau </strong>Igalia. <a
+                href="https://www.w3.org/Search/Mail/Public/search?keywords=oriol+brufau&hdr-1-name=subject&hdr-1-query=&index-grp=Public_FULL&index-type=t&type-index=public-css-archive">516
+                results in W3C Mailing list</a></li>
+            <li><strong>Rick Byers </strong>Google, Inc.</li>
+            <li><strong>Henricus Cabanier </strong>Magic Leap, Inc.</li>
+            <li><strong>Bo Campbell </strong>IBM Corporation</li>
+            <li><strong>Tantek Çelik </strong>Mozilla Foundation</li>
+            <li><strong>cathie chen </strong>Tencent</li>
+            <li><strong>cathie chen </strong>Igalia</li>
+            <li><strong>Junichi Chiba </strong>Beyond Perspective Solutions ltd</li>
+            <li><strong>Emilio Cobos Álvarez </strong>Mozilla Foundation</li>
+            <li><strong>Dave Cramer </strong>Hachette Livre</li>
+            <li><strong>Phil Cupp </strong>Microsoft Corporation</li>
+            <li><strong>John Daggett </strong>W3C Invited Experts</li>
+            <li><strong>Beth Dakin </strong>Apple, Inc.</li>
+            <li><strong>Fergal Daly </strong>Google, Inc.</li>
+            <li><strong>Alex Danilo </strong>Google, Inc.</li>
+            <li><strong>Greg Davis </strong>Pearson plc</li>
+            <li><strong>Benjamin De Cock </strong>Stripe</li>
+            <li><strong>smallni ding </strong>Tencent</li>
+            <li><strong>Shwetank Dixit </strong>eyeo GmbH</li>
+            <li><strong>Tim Dresser </strong>Google, Inc.</li>
+            <li><strong>Emil Eklund </strong>Google, Inc.</li>
+            <li><strong>Kevin Ellis </strong>Google, Inc.</li>
+            <li><strong>Elika Etemad </strong>W3C Invited Experts</li>
+            <li><a href="https://twitter.com/lajava77"><strong>Javier Fernandez </strong></a>Igalia. <a
+                href="https://www.w3.org/Search/Mail/Public/search?keywords=Javier+Fernandez&hdr-1-name=subject&hdr-1-query=&index-grp=Public_FULL&index-type=t&type-index=public-css-archive">134</a>
+            </li>
+            <li><strong>Reinaldo Ferraz </strong>NIC.br - Brazilian Network Information Center</li>
+            <li><strong>Robert Flack </strong>Google, Inc.</li>
+            <li><strong>Simon Fraser </strong>Apple, Inc.</li>
+            <li><strong>Brent Fulgham </strong>Apple, Inc.</li>
+            <li><strong>Daniel Glazman </strong>Disruptive Innovations</li>
+            <li><strong>Aryeh Gregor </strong>Mozilla Foundation</li>
+            <li><strong>Soonbo Han </strong>LG Electronics</li>
+            <li><strong>Shouichi Harayama </strong>Beyond Perspective Solutions ltd</li>
+            <li><strong>Chris Harrelson </strong>Google, Inc.</li>
+            <li><strong>Jihye Hong </strong>LG Electronics</li>
+            <li><strong>Dongwoo Joshua Im </strong>Samsung Electronics Co., Ltd.</li>
+            <li><strong>Richard Ishida </strong>W3C Staff</li>
+            <li><strong>Koji Ishii </strong>Google, Inc.</li>
+            <li><strong>Kunio Ito </strong>Rakuten, Inc.</li>
+            <li><strong>Dael Jackson </strong>W3C Invited Experts</li>
+            <li><strong>Dean Jackson </strong>Apple, Inc.</li>
+            <li><strong>Sanket Joshi </strong>Microsoft Corporation</li>
+            <li><strong>troy kang </strong>Tencent</li>
+            <li><strong>Brian Kardell </strong>JS Foundation</li>
+            <li><strong>Brad Kemper </strong>W3C Invited Experts</li>
+            <li><strong>Ian Kilpatrick </strong>Google, Inc.</li>
+            <li><strong>Tomoya Kimura </strong>Voyager Japan, Inc.</li>
+            <li><strong>Jirka Kosek </strong>W3C Invited Experts</li>
+            <li><strong>Una Kravets </strong>Google, Inc.</li>
+            <li><strong>Philippe Le Hégaret </strong>W3C Staff</li>
+            <li><strong>Hyejin Lee </strong>HTML5 Converged Technology Forum</li>
+            <li><strong>WonSuk Lee </strong>Electronics and Telecommunications Research Institute (ETRI)
+            </li>
+            <li><strong>Pierre-Anthony Lemieux </strong>MovieLabs</li>
+            <li><strong>Vladimir Levantovsky </strong>Monotype</li>
+            <li><strong>lin li </strong>China Mobile Communications Corporation</li>
+            <li><strong>Twinsen Liang </strong>Tencent</li>
+            <li><strong>Rune Lillesveen </strong>Google, Inc.</li>
+            <li><strong>Chris Lilley </strong>W3C Staff</li>
+            <li><strong>Peter Linss </strong>W3C Invited Experts</li>
+            <li><strong>Guanyu Liu </strong>360</li>
+            <li><strong>Luke Macpherson </strong>Google, Inc.</li>
+            <li><strong>Stanton Marcum </strong>Amazon</li>
+            <li><strong>Daniel Marques </strong>WIRIS Science</li>
+            <li><strong>Myles Maxfield </strong>Apple, Inc.</li>
+            <li><strong>Cameron McCormack </strong>Mozilla Foundation</li>
+            <li><strong>Stephen McGruer </strong>Google, Inc.</li>
+            <li><strong>Nigel Megitt </strong>British Broadcasting Corporation</li>
+            <li><strong>Thierry Michel </strong>W3C Staff</li>
+            <li><strong>Eric Muller </strong>Amazon</li>
+            <li><strong>Masayuki Nakano </strong>Mozilla Foundation</li>
+            <li><strong>Giorgio Natili </strong>Amazon</li>
+            <li><strong>Ryosuke Niwa </strong>Apple, Inc.</li>
+            <li><strong>Theresa O'Connor </strong>Apple, Inc.</li>
+            <li><strong>David O'Dey </strong>Pearson plc</li>
+            <li><strong>YOICHI OSATO </strong>Google, Inc.</li>
+            <li><strong>Simon Pieters </strong>Bocoup</li>
+            <li><strong>Benjamin Poulain </strong>Apple, Inc.</li>
+            <li><strong>Ian Pouncey </strong>The Paciello Group, LLC</li>
+            <li><strong>Deblyn prado </strong>NIC.br - Brazilian Network Information Center</li>
+            <li><strong>Anton Prowse </strong>W3C Invited Experts</li>
+            <li><strong>Antoine Quint </strong>Apple, Inc.</li>
+            <li><strong>Naina Raisinghani </strong>Google, Inc.</li>
+            <li><strong>Kai Recke </strong>eyeo GmbH</li>
+            <li><a href="https://twitter.com/regocas"> <strong>Manuel Rego Casasnovas </strong></a>Igalia <a
+                href="https://www.w3.org/Search/Mail/Public/search?keywords=Manuel+Rego&hdr-1-name=subject&hdr-1-query=&index-grp=Public_FULL&index-type=t&type-index=public-css-archive">205</a>
+            </li>
+            <li><strong>François Remy </strong>W3C Invited Experts</li>
+            <li><strong>Melanie Richards </strong>Microsoft Corporation</li>
+            <li><strong>Florian Rivoal </strong>W3C Invited Experts</li>
+            <li><strong>Philip Rogers </strong>Google, Inc.</li>
+            <li><strong>Devin Rousso </strong>Apple, Inc.</li>
+            <li><strong>Kenneth Russell </strong>Google, Inc.</li>
+            <li><strong>Anders Hartvoll Ruud </strong>Google, Inc.</li>
+            <li><strong>Hiroshi Sakakibara </strong>Beyond Perspective Solutions ltd</li>
+            <li><strong>Simon Sapin </strong>Mozilla Foundation</li>
+            <li><strong>Nathalia Sautchuk Patrício </strong>NIC.br - Brazilian Network Information Center
+            </li>
+            <li><strong>Christopher Schmitt </strong>Knowbility</li>
+            <li><strong>Dirk Schulze </strong>Adobe</li>
+            <li><strong>Jen Simmons </strong>Mozilla Foundation</li>
+            <li><strong>David Singer </strong>Apple, Inc.</li>
+            <li><strong>Sam Sneddon </strong>W3C Invited Experts</li>
+            <li><strong>Hyojin Song </strong>LG Electronics</li>
+            <li><strong>Markus Stange </strong>Mozilla Foundation</li>
+            <li><strong>Alan Stearns </strong>Adobe</li>
+            <li><strong>Shane Stephens </strong>Google, Inc.</li>
+            <li><strong>Surma Surma </strong>Google, Inc.</li>
+            <li><strong>Gérard Talbot </strong>W3C Invited Experts</li>
+            <li><strong>Aleks Totic </strong>Google, Inc.</li>
+            <li><strong>Alan Turransky </strong>IAB Technology Laboratory, Inc.</li>
+            <li><strong>Majid Valipour </strong>Google, Inc.</li>
+            <li><strong>Lea Verou </strong>W3C Invited Experts</li>
+            <li><a href="https://www.linkedin.com/in/sergio-villar-senin-7430928/?originalSubdomain=es"
+                target="_blank"><strong>Sergio Villar Senin </strong></a>Igalia</li>
+            <li><strong>Sean Voisen </strong>Mozilla Foundation</li>
+            <li><strong>Ian Vollick </strong>Google, Inc.</li>
+            <li><strong>Philip Walton </strong>Google, Inc.</li>
+            <li><strong>Masaki Watanabe </strong>Beyond Perspective Solutions ltd</li>
+            <li><strong>Greg Whitworth </strong>Microsoft Corporation</li>
+            <li><strong>Eric Willigers </strong>Google, Inc.</li>
+            <li><strong>Chris Wilson </strong>Google, Inc.</li>
+            <li><strong>Matt Woodrow </strong>Mozilla Foundation</li>
+            <li><strong>yaohua wu </strong>China Mobile Communications Corporation</li>
+            <li><strong>Jeff Xu </strong>Rakuten, Inc.</li>
+            <li><strong>Fuqiao Xue </strong>W3C Staff</li>
+            <li><strong>Kazutaka Yamamoto </strong>Nippon Telegraph & Telephone Corp. (NTT)</li>
+            <li><strong>文力 何 </strong>360</li>
+            <li><strong>佳 安 </strong>360</li>
+          </ul>
+        </section>
+        <section>
+          <a href="https://twitter.com/i/moments/1176025506162118659" class="icon-source"></a>
+          <h1>Fukuoka 2019</h1>
+          <p>Sus eventos</p>
+        </section>
+        <section data-background="assets/images/csswg-f2f-berlin-2018-by-rossen-atanassov.jpg">
+          <a href="https://blogs.igalia.com/mrego/2018/04/16/csswg-f2f-berlin-2018/" class="icon-source inverse"></a>
+          <h1 class="inverse">F2F meegings</h1>
+          <p class="inverse">Berlin 2018</p>
+        </section>
+        <section>
+          <h1><strong>Browsers</strong></h1>
+        </section>
+        <section>
+          <h1>Belen Albeza</h1>
+          <img class="avatar" src="assets/images/belen.png" alt="">
+          <p>Mozilla. Firefox DevTools team.</p>
+          <a href="https://www.belenalbeza.com/">Web</a>
+          <a href="https://twitter.com/ladybenko">Twitter</a>
+        </section>
+        <section data-background="assets/images/superhero.jpg">
+        </section>
+      </section>
+      <section>
+        <section>
+          <a target="_blank" class="icon-source" href="https://www.w3.org/Style/CSS/current-work#CSS3">
+          </a>
+          <h1>W3C CSS <strong>current work</strong></h1>
+          <p>
+            <a href="https://www.w3.org/TR/?tag=css">
+              CSS standard and drafts
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Explanation of colors & status codes</h2>
+          <img src="assets/images/w3c-legend-selected.png" alt="">
+        </section>
+        <section>
+          <a href="https://cssdb.org/" class="icon-source" target="_blank"></a>
+          <h1 class="highlight-color">cssdb.org</h1>
+          <h2>CSS Stages</h2>
+        </section>
+        <section>
+          <h1>How do decide?</h1>
+          <ul>
+            <li>Status code on spec</li>
+            <li>Maturity in the status</li>
+            <li>Browser support</li>
+            <li>Your project</li>
+          </ul>
+        </section>
+      </section>
+      <section data-background="https://i.giphy.com/12NUbkX6p4xOO4.gif"></section>
+      </section>
+      <section class="label-cr">
+        <section>
+          <h1 class="status-cr">W3C <strong>Candidate Recommendation</strong></h1>
+          <p><a href="https://cssdb.org/#stage-3">Stage 3</a></p>
+          <a target="_blank" class="icon-source" href="">
+          </a>
+        </section>
+        <section data-background="#cfd730">
+          <h1>
+            <strong>Scroll Snap </strong>
+            Module</h1>
+          <h2>Level 1</h2>
+          <p>19 March 2019</p>
+          <a target="_blank" class="icon-source" href="https://www.w3.org/TR/2019/CR-css-scroll-snap-1-20190319/">
+          </a>
+        </section>
+        <section>
+          <h1>smooth-scrolling</h1>
+          <pre>
+						<code>
+.scroll-container {
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+	height: 100vh;
+}
+						</code>
+					</pre>
+          <a target="_blank" class="icon-source" href="https://www.w3.org/TR/2019/CR-css-scroll-snap-1-20190319/">
+          </a>
+        </section>
+        <section data-background-iframe="https://codepen.io/nabaroa/pen/xejLoa/"></section>
+        <section data-background-iframe="https://caniuse.com/#feat=css-scroll-behavior"></section>
+        <section data-background="#cfd730">
+          <h1><strong>Media Queries</strong> Level 4</h1>
+          <p>W3C Candidate Recommendation, 5 September 2017</p>
+          <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <img src="assets/images/media.png" alt="">
+        </section>
+        <section>
+          <pre>
+                        <code>
+@media (min-width: 20em) and (max-width: 60em) {
+    /* CSS rules for screen sizes between 20em and 60em */
+                        </code>
+                    </pre>
+        </section>
+        <section>
+          <h2><strong>Syntax improvements</strong> for ranges</h2>
+          <img src="assets/images/media-rage.png" alt="">
+        </section>
+        <section>
+          <pre>
+                        <code>
+@media (20em <= width <= 60em ) {
+    /* CSS rules for screen sizes between 20em and 60em */
+}
+                        </code>
+                    </pre>
+        </section>
+        <section data-background="#cfd730">
+          <h1>CSS <strong>Conditional Rules</strong> Module Level 3</h1>
+          <p>W3C Candidate Recommendation 4 April 2013</p>
+          <a href="https://www.w3.org/TR/css3-conditional/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <h1>‘@supports’ rule</h1>
+          <pre>
+                        <code>
+@supports (display: grid) {
+    /* CSS rules for browsers that support grid layout */
+}
+                        </code>
+                    </pre>
+        </section>
+        <section data-background-iframe="https://caniuse.com/#feat=css-featurequeries"></section>
+      </section>
+      <section class="label-wd">
+        <section>
+          <h1 class="status-wd inverse">W3C Working Draft</h1>
+          <a target="_blank" class="icon-source" href="https://drafts.csswg.org/">
+          </a>
+        </section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse">CSS <strong>Fonts</strong> Module Level 4</h1>
+          <a href="https://www.w3.org/TR/css-fonts-4/" target="_blank" class="icon-source"></a>
+          <p class="inverse">W3C Working Draft, 20 September 2018</p>
+        </section>
+        <section data-background-iframe="https://codepen.io/mandymichael/pen/vYYLByj#code-area"></section>
+        <section>
+          <h1><strong>Variable</strong> fonts</h1>
+          <p>font-variation-settings</p>
+          <a class="icon-source" href="https://www.axis-praxis.org/specimens/__DEFAULT__">
+          </a>
+        </section>
+        <section data-background-iframe="https://css-tricks.com/one-file-many-options-using-variable-fonts-web/">
+        </section>
+        <section data-background-iframe="https://caniuse.com/#feat=mdn-css_properties_font-variation-settings">
+        </section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse">CSS <strong>Box Alignment</strong> Module Level 3</h1>
+          <a href="https://www.w3.org/TR/css-align-3/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <h1><strong>Gaps</strong> for <strong>flexbox</strong></h1>
+          <a href="https://www.w3.org/TR/css-align-3/#gaps" target="_blank" class="icon-source"></a>
+        </section>
+        <section data-background-iframe="https://codepen.io/nabaroa/pen/xxxjxJZ"></section>
+        <section data-background-iframe="https://caniuse.com/#search=column%20gap"></section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse">CSS <strong>Logical Properties and Values</strong> Level 1</h1>
+          <p class="inverse">W3C Working Draft, 27 August 2018</p>
+          <a href="https://www.w3.org/TR/css-logical-1/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <h1><strong>block-size</strong> & <strong class="d-block">inline-size</strong></h1>
+          <a href="https://www.w3.org/TR/css-logical-1/#dimension-properties" target="_blank" class="icon-size"></a>
+        </section>
+        <section>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inline-size" target="_blank"
+            class="icon-source"></a>
+          <h1>Demo in MDN</h1>
+        </section>
+        <section data-background-iframe="https://caniuse.com/#feat=mdn-css_properties_inline-size"></section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse"><strong>Selectors</strong> Level 4</h1>
+          <p class="inverse">W3C Working Draft, 21 November 2018</p>
+          <a class="inverse" href="https://www.w3.org/TR/selectors-4/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <a href="https://www.w3.org/TR/selectors-4/" target="_blank" class="icon-source"></a>
+          <h1>:focus-within</h1>
+        </section>
+        <section data-background-iframe="https://codepen.io/nabaroa/pen/LYYrZKZ"></section>
+        <section data-background-iframe="https://caniuse.com/#search=focus-within"></section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse">Subgrid</h1>
+          <a target="_blank" href="https://www.w3.org/TR/css-grid-2/#subgrids" class="icon-source"></a>
+          <a class="inverse" target="_blank" href="https://twitter.com/jensimmons/status/1184084514810802177">3 de
+            diciembre en Firefox</a>
+          <a class="inverse" target="_blank" href="https://www.youtube.com/watch?v=lLnFtK1LNu4&feature=youtu.be">Video
+            how to use subgrid</a>
+        </section>
+        <section data-background-iframe="https://codepen.io/mirisuzanne/pen/xxKRpmq"></section>
+        <section data-background-iframe="https://caniuse.com/#feat=css-subgrid"></section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse">CSS <strong>Positioned Layout</strong> Module Level 3</h1>
+          <p class="inverse">W3C Working Draft, 17 May 2016</p>
+          <a class="inverse" href="https://www.w3.org/TR/css-position-3/#sticky-pos" class="icon-source"></a>
+        </section>
+        <section>
+          <h1>Position: sticky;</h1>
+        </section>
+        <section data-background-iframe="https://codepen.io/nabaroa/pen/aQKMVq"></section>
+        <section data-background-iframe="https://caniuse.com/#feat=css-sticky"></section>
+        <section data-background="#E66E3C">
+          <h1 class="inverse"><strong>Selectors</strong> Level 4</h1>
+          <p>Editor’s Draft, 17 August 2019</p>
+          <a href="https://drafts.csswg.org/selectors-4/#relational" class="icon-source"></a>
+        </section>
+        <section>
+          <h1>Parent element selector</h1>
+          <a href="https://drafts.csswg.org/selectors-4/#relational" class="icon-source"></a>
+        </section>
+        <section>
+          <pre>
+                        <code>
+a:has(> img) {
+    display: block;
+}
+                        </code>
+                    </pre>
+        </section>
+        <section data-background-iframe="https://codepen.io/nabaroa/pen/NWWzpeZ"></section>
+        <section data-background-iframe="https://caniuse.com/#feat=css-has"></section>
+      </section>
+      <section class="label-fwd">
+        <section>
+          <h1 class="status-fwd inverse">First Public Working Draft</h1>
+          <p>Editor's draft</p>
+        </section>
+        <section data-background="#b3634f">
+          <h1 class="inverse">CSS <strong>Text Decoration</strong> Module Level 4</h1>
+          <p class="inverse">W3C First Public Working Draft, 13 March 2018</p>
+          <a class="inverse" href="https://www.w3.org/TR/css-text-decor-4/" target="_blank" class="icon-source"></a>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <ul>
+            <li>You can make an underline <a href="">thicker or thinner.</a></li>
+            <li>You can move it <a href="">closer/further</a> from the text.</li>
+            <li>You can control if the line <a href="">intersects</a> with characters.</li>
+          </ul>
+        </section>
+        <section>
+          <p>text-decoration-thickness</p>
+          <p>text-underline-offset</p>
+          <p>text-decoration-skip-ink</p>
+          <p>text-decoration-color</p>
+        </section>
+        <section data-background-iframe="https://caniuse.com/#search=text-decoration"></section>
+
+        <section data-background="#b3634f">
+          <h1 class="inverse">CSS <strong>Nesting</strong> Module</h1>
+          <p class="inverse">Editor’s Draft, 9 March 2019</p>
+          <a target="_blank" class="inverse icon-source" href="https://drafts.csswg.org/css-nesting-1/">
+          </a>
+        </section>
+        <section>
+          <h1>postcss-nesting</h1>
+          <a class="icon-source" target="_blank" href="https://github.com/jonathantneal/postcss-nesting"></a>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1><strong>Early</strong> adopter</h1>
+        </section>
+        <section data-background="http://giphygifs.s3.amazonaws.com/media/cS83sLRzgVOeY/giphy.gif">
+        </section>
+        <section>
+          <h1><strong>@apply</strong> drama</h1>
+          <a href="http://tabatkins.github.io/specs/css-apply-rule/" target="_black"></a>
+        </section>
+        <video>
+          <source data-src="video.webm" type="video/webm" />
+          <source data-src="video.mp4" type="video/mp4" />
+        </video>
+        <section>
+          <h1>Work <strong>only</strong> with standars</h1>
+          <p> Is it possible?</p>
+          <p>PostCSS</p>
+        </section>
+        <section>
+          <h1><strong>Neptune</strong></h1>
+          <p> Design System at</p>
+          <img src="assets/images/transferwise.svg" alt="Transferwise" />
+        </section>
+        <section data-background-iframe="https://postcss.org/"></section>
+      </section>
+      <section>
+        <section data-background="#fabada">
+          <h1>#fabada</h1>
+        </section>
+        <section data-background="#cd2682">
+          <h1>
+            Gracias
+          </h1>
+          <img src="https://fabadaconf.com/images/logo.png" alt="">
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true
+        }
+      ]
+    });
+  </script>
+</body>
+</html>
